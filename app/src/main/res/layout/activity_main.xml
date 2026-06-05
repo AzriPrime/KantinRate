@@ -14,7 +14,7 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_bottom_toTopOf="@id/bottomNavigationInclude" />
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationInclude" />
 
     <!-- Bottom Navigation Bar (Included) -->
     <include
