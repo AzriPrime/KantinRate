@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/berandaFragment">
+
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.example.kantinrate.ui.BerandaFragment"
+        android:label="Beranda"
+        tools:layout="@layout/activity_beranda" />
+
+    <fragment
+        android:id="@+id/galeriFragment"
+        android:name="com.example.kantinrate.ui.GaleriFragment"
+        android:label="Galeri"
+        tools:layout="@layout/activity_galeri" />
+
+    <fragment
+        android:id="@+id/hasilSurveiFragment"
+        android:name="com.example.kantinrate.ui.HasilSurveiFragment"
+        android:label="Hasil Survei"
+        tools:layout="@layout/activity_hasil_survei" />
+</navigation>

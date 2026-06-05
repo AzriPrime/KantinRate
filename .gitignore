@@ -1,0 +1,30 @@
+# Built artifacts and gradle files
+/build
+/*/build
+.gradle/
+build/
+app/build/
+
+# Local SDK and configuration files (crucial: contains absolute path to Android SDK)
+local.properties
+
+# Log files and reports
+*.log
+.navigation/
+captures/
+
+# Android Studio / IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+
+# OS generated files
+.DS_Store
+Thumbs.db
