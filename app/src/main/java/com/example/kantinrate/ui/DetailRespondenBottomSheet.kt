@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.kantinrate.MainActivity
 import com.example.kantinrate.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
@@ -55,10 +56,12 @@ class DetailRespondenBottomSheet : BottomSheetDialogFragment() {
         }
 
         view.findViewById<View>(R.id.btnCloseDialog)?.setOnClickListener {
+            (activity as? MainActivity)?.playCloseSound()
             dismiss()
         }
 
         view.findViewById<MaterialButton>(R.id.btnTutupDialog)?.setOnClickListener {
+            (activity as? MainActivity)?.playCloseSound()
             dismiss()
         }
     }

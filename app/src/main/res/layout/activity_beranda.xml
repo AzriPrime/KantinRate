@@ -7,7 +7,6 @@
     android:background="@color/background_mint"
     tools:context="com.example.kantinrate.MainActivity">
 
-    <!-- Top Bar Header -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/headerBar"
         android:layout_width="match_parent"
@@ -42,7 +41,6 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Main Content (Scrollable) -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -57,7 +55,6 @@
             android:gravity="center_horizontal"
             android:padding="24dp">
 
-            <!-- Logo ULM -->
             <ImageView
                 android:id="@+id/imgLogoUlm"
                 android:layout_width="140dp"
@@ -66,7 +63,6 @@
                 android:src="@drawable/logo_ulm"
                 android:contentDescription="Logo ULM" />
 
-            <!-- Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,7 +72,6 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <!-- Subtitle -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,7 +80,6 @@
                 android:textColor="@color/text_gray"
                 android:textSize="12sp" />
 
-            <!-- Description -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +91,6 @@
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.2" />
 
-            <!-- Card 1: Galeri & Dokumentasi -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/btnGaleri"
                 android:layout_width="match_parent"
@@ -119,7 +112,6 @@
                     android:gravity="center_vertical"
                     android:padding="16dp">
 
-                    <!-- Rounded Icon container -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -163,7 +155,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Card 2: Hasil Survei -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/btnHasilSurvei"
                 android:layout_width="match_parent"
@@ -185,7 +176,6 @@
                     android:gravity="center_vertical"
                     android:padding="16dp">
 
-                    <!-- Rounded Icon container -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="48dp"
                         android:layout_height="48dp"

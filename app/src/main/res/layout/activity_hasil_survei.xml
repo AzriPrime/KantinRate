@@ -7,7 +7,6 @@
     android:background="@color/background_mint"
     tools:context="com.example.kantinrate.MainActivity">
 
-    <!-- Top Bar Header -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/headerBar"
         android:layout_width="match_parent"
@@ -42,7 +41,6 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Main Content (Scrollable) -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -56,7 +54,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +64,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- Survey Question Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +80,6 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Question Badge -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -96,7 +91,6 @@
                         android:textSize="10sp"
                         android:textStyle="bold" />
 
-                    <!-- Question Text -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -108,14 +102,12 @@
                         android:textStyle="bold"
                         android:lineSpacingMultiplier="1.2" />
 
-                    <!-- Divider -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="#E8ECE9"
                         android:layout_marginBottom="12dp" />
 
-                    <!-- Question Footer Info -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -140,8 +132,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- List of Respondents -->
-            <!-- 1. Devon -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardRespondenDevon"
                 android:layout_width="match_parent"
@@ -202,7 +192,6 @@
                             android:textColor="@color/text_gray"
                             android:textSize="12sp" />
 
-                        <!-- Rating Stars -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -222,8 +211,7 @@
                                 android:layout_marginStart="8dp"
                                 android:text="4 / 5"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:textSize="12sp" Record="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -251,7 +239,6 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- 2. Felix -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardRespondenFelix"
                 android:layout_width="match_parent"
@@ -312,7 +299,6 @@
                             android:textColor="@color/text_gray"
                             android:textSize="12sp" />
 
-                        <!-- Rating Stars -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -361,7 +347,6 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- 3. Ahsan -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardRespondenAhsan"
                 android:layout_width="match_parent"
@@ -422,7 +407,6 @@
                             android:textColor="@color/text_gray"
                             android:textSize="12sp" />
 
-                        <!-- Rating Stars -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -471,7 +455,6 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- 4. Nova -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardRespondenNova"
                 android:layout_width="match_parent"
@@ -532,7 +515,6 @@
                             android:textColor="@color/text_gray"
                             android:textSize="12sp" />
 
-                        <!-- Rating Stars -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -581,7 +563,6 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- 5. Amin -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardRespondenAmin"
                 android:layout_width="match_parent"
@@ -642,7 +623,6 @@
                             android:textColor="@color/text_gray"
                             android:textSize="12sp" />
 
-                        <!-- Rating Stars -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -662,8 +642,7 @@
                                 android:layout_marginStart="8dp"
                                 android:text="5 / 5"
                                 android:textColor="@color/text_dark"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:textSize="12sp" Record="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"

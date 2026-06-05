@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.kantinrate.R
+import com.example.kantinrate.MainActivity
 
 class HasilSurveiFragment : Fragment() {
 
@@ -20,7 +21,6 @@ class HasilSurveiFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Bind clicks for the 5 respondent cards to show bottom sheet dialogs dynamically
         view.findViewById<View>(R.id.cardRespondenDevon)?.setOnClickListener {
             showDetails(
                 name = "Devon",
@@ -72,7 +72,7 @@ class HasilSurveiFragment : Fragment() {
                 details = "Koperasi Tricivitas  •  Angkatan 2024",
                 ratingKualitas = 5,
                 ratingHarga = 5,
-                comment = "Sangat puas dengan kebersihan kantin kopma. Pelayanan cepat dan tertata."
+                comment = "Sangat puas dengan kebersihan kantin kopma. Pelayanan cepat and tertata."
             )
         }
     }
@@ -85,6 +85,8 @@ class HasilSurveiFragment : Fragment() {
         ratingHarga: Int,
         comment: String
     ) {
+        (activity as? MainActivity)?.playBubbleSound()
+        
         val bottomSheet = DetailRespondenBottomSheet.newInstance(
             name, faculty, details, ratingKualitas, ratingHarga, comment
         )

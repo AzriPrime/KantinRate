@@ -7,6 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.navOptions
+import com.example.kantinrate.MainActivity
 import com.example.kantinrate.R
 
 class BottomNavManager(
@@ -33,29 +36,38 @@ class BottomNavManager(
     }
 
     private fun setupClickListeners() {
+        val options = navOptions {
+            popUpTo(navController.graph.findStartDestination().id) {
+                saveState = true
+            }
+            launchSingleTop = true
+            restoreState = true
+        }
+
         navHome.setOnClickListener {
-            navController.navigate(R.id.berandaFragment) {
-                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                launchSingleTop = true
-                restoreState = true
+            playClickSound()
+            if (navController.currentDestination?.id != R.id.berandaFragment) {
+                navController.navigate(R.id.berandaFragment, null, options)
             }
         }
 
         navGallery.setOnClickListener {
-            navController.navigate(R.id.galeriFragment) {
-                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                launchSingleTop = true
-                restoreState = true
+            playClickSound()
+            if (navController.currentDestination?.id != R.id.galeriFragment) {
+                navController.navigate(R.id.galeriFragment, null, options)
             }
         }
 
         navResults.setOnClickListener {
-            navController.navigate(R.id.hasilSurveiFragment) {
-                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                launchSingleTop = true
-                restoreState = true
+            playClickSound()
+            if (navController.currentDestination?.id != R.id.hasilSurveiFragment) {
+                navController.navigate(R.id.hasilSurveiFragment, null, options)
             }
         }
+    }
+
+    private fun playClickSound() {
+        (navigationContainer.context as? MainActivity)?.playBubbleSound()
     }
 
     private fun setupDestinationListener() {
@@ -69,47 +81,42 @@ class BottomNavManager(
         val greenColor = ContextCompat.getColor(context, R.color.primary_green)
         val grayColor = ContextCompat.getColor(context, R.color.text_gray)
 
-        // Reset all tabs to inactive state
-        imgNavHome.imageTintList = ColorStateList.valueOf(grayColor)
-        txtNavHome.setTextColor(grayColor)
-        txtNavHome.setTypeface(null, android.graphics.Typeface.NORMAL)
+        resetTab(imgNavHome, txtNavHome, grayColor)
+        resetTab(imgNavGallery, txtNavGallery, grayColor, frameNavGallery)
+        resetTab(imgNavResults, txtNavResults, grayColor, frameNavResults)
 
-        imgNavGallery.imageTintList = ColorStateList.valueOf(grayColor)
-        txtNavGallery.setTextColor(grayColor)
-        txtNavGallery.setTypeface(null, android.graphics.Typeface.NORMAL)
-        frameNavGallery.background = null
-        frameNavGallery.setPadding(0, 0, 0, 0)
-
-        imgNavResults.imageTintList = ColorStateList.valueOf(grayColor)
-        txtNavResults.setTextColor(grayColor)
-        txtNavResults.setTypeface(null, android.graphics.Typeface.NORMAL)
-        frameNavResults.background = null
-        frameNavResults.setPadding(0, 0, 0, 0)
-
-        // Apply active styles to the selected tab destination
         when (destinationId) {
             R.id.berandaFragment -> {
-                imgNavHome.imageTintList = ColorStateList.valueOf(greenColor)
-                txtNavHome.setTextColor(greenColor)
-                txtNavHome.setTypeface(null, android.graphics.Typeface.BOLD)
+                setActiveTab(imgNavHome, txtNavHome, greenColor)
             }
             R.id.galeriFragment -> {
-                imgNavGallery.imageTintList = ColorStateList.valueOf(greenColor)
-                txtNavGallery.setTextColor(greenColor)
-                txtNavGallery.setTypeface(null, android.graphics.Typeface.BOLD)
+                setActiveTab(imgNavGallery, txtNavGallery, greenColor)
             }
             R.id.hasilSurveiFragment -> {
-                // Apply pill background highlight on Hasil Survei tab active (to match mockup exactly)
                 frameNavResults.background = ContextCompat.getDrawable(context, R.drawable.bg_rounded_badge_green)
                 val density = context.resources.displayMetrics.density
-                val pxHorizontal = (16 * density).toInt()
-                val pxVertical = (2 * density).toInt()
-                frameNavResults.setPadding(pxHorizontal, pxVertical, pxHorizontal, pxVertical)
+                val pxH = (16 * density).toInt()
+                val pxV = (2 * density).toInt()
+                frameNavResults.setPadding(pxH, pxV, pxH, pxV)
 
-                imgNavResults.imageTintList = ColorStateList.valueOf(greenColor)
-                txtNavResults.setTextColor(greenColor)
-                txtNavResults.setTypeface(null, android.graphics.Typeface.BOLD)
+                setActiveTab(imgNavResults, txtNavResults, greenColor)
             }
         }
+    }
+
+    private fun resetTab(img: ImageView, txt: TextView, color: Int, frame: FrameLayout? = null) {
+        img.imageTintList = ColorStateList.valueOf(color)
+        txt.setTextColor(color)
+        txt.setTypeface(null, android.graphics.Typeface.NORMAL)
+        frame?.let {
+            it.background = null
+            it.setPadding(0, 0, 0, 0)
+        }
+    }
+
+    private fun setActiveTab(img: ImageView, txt: TextView, color: Int) {
+        img.imageTintList = ColorStateList.valueOf(color)
+        txt.setTextColor(color)
+        txt.setTypeface(null, android.graphics.Typeface.BOLD)
     }
 }

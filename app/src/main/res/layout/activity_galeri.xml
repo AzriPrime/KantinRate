@@ -91,7 +91,7 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <!-- Kantin FT -->
+                    <!-- Kantin FISIP -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -109,17 +109,19 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/kantin_fisip"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Kantin FISIP" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingTop="8dp"
                                 android:paddingBottom="8dp"
-                                android:text="Kantin FT"
+                                android:text="Kantin FISIP"
                                 android:textColor="@color/text_dark"
                                 android:textSize="11sp"
                                 android:gravity="center" />
@@ -144,10 +146,12 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/kantin_feb"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Kantin FEB" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -187,10 +191,11 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/kantin_hukum"
+                                android:scaleType="centerCrop" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -222,10 +227,11 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/kantin_fkip"
+                                android:scaleType="centerCrop" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -247,7 +253,7 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <!-- Kantin FK -->
+                    <!-- Kantin POLIBAN-->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -265,17 +271,19 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/kantin_poliban"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Kantin POLIBAN" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingTop="8dp"
                                 android:paddingBottom="8dp"
-                                android:text="Kantin FK"
+                                android:text="Kantin POLIBAN"
                                 android:textColor="@color/text_dark"
                                 android:textSize="11sp"
                                 android:gravity="center" />
@@ -333,10 +341,12 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/feb_responden"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Dokumentasi Devon" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -368,10 +378,12 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/fisip_responden"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Dokumentasi Nova" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -411,10 +423,12 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/poliban_responden"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Dokumentasi Devon" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -446,10 +460,12 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/hukum_responden"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Dokumentasi Devon" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -489,10 +505,12 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <View
+                            <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:background="@color/placeholder_blue" />
+                                android:src="@drawable/fkip_responden"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="Foto Dokumentasi Devon" />
 
                             <TextView
                                 android:layout_width="match_parent"

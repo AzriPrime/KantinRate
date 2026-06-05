@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import com.example.kantinrate.R
+import com.example.kantinrate.MainActivity
 
 class BerandaFragment : Fragment() {
 
@@ -21,13 +24,26 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Navigation from dashboard buttons using Jetpack Navigation
         view.findViewById<View>(R.id.btnGaleri)?.setOnClickListener {
-            findNavController().navigate(R.id.galeriFragment)
+            navigateToTab(R.id.galeriFragment)
         }
 
         view.findViewById<View>(R.id.btnHasilSurvei)?.setOnClickListener {
-            findNavController().navigate(R.id.hasilSurveiFragment)
+            navigateToTab(R.id.hasilSurveiFragment)
         }
+    }
+
+    private fun navigateToTab(destinationId: Int) {
+        (activity as? MainActivity)?.playBubbleSound()
+
+        val options = navOptions {
+            popUpTo(findNavController().graph.findStartDestination().id) {
+                saveState = true
+            }
+            launchSingleTop = true
+            restoreState = true
+        }
+
+        findNavController().navigate(destinationId, null, options)
     }
 }
