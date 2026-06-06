@@ -68,10 +68,7 @@ class DetailRespondenBottomSheet : BottomSheetDialogFragment() {
 
     override fun onStart() {
         super.onStart()
-        dialog?.let { dialog ->
-            val bottomSheet = dialog.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
-            bottomSheet?.setBackgroundColor(Color.TRANSPARENT)
-        }
+        (view?.parent as? View)?.setBackgroundColor(Color.TRANSPARENT)
     }
 
     companion object {
